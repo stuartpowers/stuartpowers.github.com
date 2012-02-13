@@ -4,6 +4,9 @@ title: Formatting Test...
 excerpt: taking a peak at this
 ---
 
+Snippet
+-------
+
 {% highlight python %}
 for i,p in enumerate(pages):
     root = lxml.html.fromstring(p)
