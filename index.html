@@ -1,12 +1,17 @@
-<html>
-<head>
-</head>
-<body>
-<a href="https://github.com/stuartpowers">https://github.com/stuartpowers</a>
-<br />
-<a href="https://gist.github.com/stuartpowers">https://gist.github.com/stuartpowers</a>
-<br />
-<a href="mailto:stuart.github@gmail.com">stuart.powers@gmail.com</a>
-</body>
-</html>
-
+---
+layout: default
+title: Stu's blog
+---
+{% for post in site.posts %}
+<section class="postPreview">
+    <header>
+        <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+        <time datetime="{{ post.date | date: '%Y-%m-%d' }}" pubdate>
+            {{ post.date | date: '%d. %B %Y' }}
+        </time>
+    </header>
+    <section>
+        {{ post.excerpt }}
+    </section>
+</section>
+{% endfor %}
